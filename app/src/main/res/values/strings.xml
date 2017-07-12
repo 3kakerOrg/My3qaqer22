@@ -1,0 +1,74 @@
+<resources>
+    <string name="app_name">عقاقير</string>
+    <string name="login_txt">تسجيل الدخول</string>
+    <string name="create_account_txt">انشاء حساب جديد</string>
+    <string name="phone_txt">ادخل رقم المحمول</string>
+    <string name="password_txt">ادخل كلمه المرور</string>
+    <string name="create_account">انشاء حساب</string>
+    <string name="drug_name">اسم الدواء</string>
+    <string name="drug_type">النوع</string>
+    <string name="concentrateDrug_txt">التركيز</string>
+    <string name="drug_name2">اسم الدواء : </string>
+    <string name="drug_type2">النوع : </string>
+    <string name="concentrateDrug_txt2">التركيز : </string>
+    <string name="userName">الاسم</string>
+    <string name="location">العنوان</string>
+    <string name="register_phone_txt">رقم المحمول</string>
+    <string name="register_password_txt">كلمه المرور (لا تقل عن 6 أحرف او أرقام)</string>
+    <string name="licence">رقم الرخصه</string>
+    <string name="checkname">الاسم فارغ</string>
+    <string name="checkphone">رقم المحمول فارغ</string>
+    <string name="checkpassword">الباسور فارغ</string>
+    <string name="checklicence">الرخصه فارغه</string>
+    <string name="checklocation">المكان فارغ</string>
+    <string name="checkaddress">العنوان فارغ</string>
+    <string name="registerCorrect">تم التسجيل بنجاح</string>
+    <string name="DialogRegister_text">جاري التسجيل.....</string>
+    <string name="registermessage">رقم المحمول موجود من قبل</string>
+    <string name="checkphone2">تأكد ان رقم المحمول مكتوب بشكل صحيح</string>
+    <string name="checkpassword2">كلمه المرور لاتقل عن 6 احرف او ارقام</string>
+    <string name="checkinternet">تحقق من فضلك من الانترنت</string>
+    <string name="userregister_befor">تم التسجيل بهذا الرقم من قبل</string>
+    <string name="errorin_registration">حدث خطأ اثناء التسجيل</string>
+    <string name="usernot_register">لم يتم التسجيل من قبل بهذا الرقم من فضلك سجل اولا</string>
+    <string name="errorin_login">حدث خطأ اثناء الدخول</string>
+    <string name="DialogLogin_text">تسجيل الدخول.....</string>
+    <string name="DialogaddDrug_text">جاري الاضافه.....</string>
+    <string name="passwordnot_correct">كلمه المرور خاطئه</string>
+    <string name="title_activity_profile__pharmacy">Profile_Pharmacy</string>
+    <string name="checkDrugname">اسم الدواء فارغ</string>
+    <string name="checkDrugconcentrate">التركيز فارغ</string>
+    <string name="checkDrugtype">اختار نوع الدواء</string>
+    <string name="checkDrugimage">من فضلك اختار صوره للدواء</string>
+    <string name="result_txt">تم اضافه الدواء بنجاح</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="noDrugname"> عفوا لا يوجد هذا الدواء من فضلك تاكد من كتابه الدواء بشكل صحيح</string>
+    <string name="title_activity_profile">Profile</string>
+    <string name="SendNot">ارسال</string>
+    <string name="CancelNot">الغاء</string>
+    <string name="Drugname">من فضلك ادخل اسم الدواء الذي تريده</string>
+    <string name="note">برجاء ادخال رقم المحمول الخاص بهذا الهاتف لكي تتمكن من استقبال الرسائل علي هذا التطبيق</string>
+    <string name="fab1title">اضافه دواء</string>
+    <string name="fab2title">خروج</string>
+    <string name="addDrug_txt">اضافه دواء</string>
+    <string name="deleteDrug_txt">تم حزف الدواء</string>
+    <string name="deleteallDrug_txt">تم حزف جميع الادويه</string>
+    <string name="avialable_txt">متوفر</string>
+    <string name="delete_not_txt">حزف</string>
+    <string name="update_txt">تعديل</string>
+    <string name="Drug_state">الحاله : </string>
+    <string name="pharmacy_name_txt">اسم الصيدليه : </string>
+    <string name="pharmacy_location_txt">العنوان : </string>
+    <string name="pharmacy_phone">رقم المحمول : </string>
+    <string name="no_notf_txt">لايوجد اي اشعارات لعرضها</string>
+    <string name="no_drug_txt">لايوجد اي ادويه لعرضها</string>
+
+    <array name="spinner">
+        <item>النوع</item>
+        <item>حبوب</item>
+        <item>شراب</item>
+        <item>حقن</item>
+    </array>
+
+</resources>
+

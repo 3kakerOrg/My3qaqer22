@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorPrimary"
+    android:fillViewport="true"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="10dp"
+            android:id="@+id/not_container"
+            android:visibility="visible"
+            >
+            <ImageView
+                android:id="@+id/user_notf"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@mipmap/not"
+                android:scaleType="centerCrop"
+                />
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/notf_txt"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_gravity="bottom|right"
+                android:background="@drawable/txt_bg"
+                android:text="1"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="8sp"
+                />
+        </FrameLayout>
+
+    <LinearLayout
+
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.omd.a3qaqer.Activites.Login_Register"
+
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="50dp"
+
+            >
+            <TextView
+                android:id="@+id/logo_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textAppearance="@android:style/TextAppearance.Large"
+                android:textColor="@color/btnColor"
+                android:textStyle="normal|bold"
+                />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <android.support.v7.widget.CardView
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/button"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/drug_name"
+                    android:layout_gravity="center"
+                    android:textSize="18sp"
+
+                    />
+                <android.support.v7.widget.SearchView
+                    app:searchHintIcon="@drawable/search_icon"
+                    app:searchIcon="@drawable/ic_magnify_white_18dp"
+                    app:submitBackground="@color/btnColor"
+                    app:queryBackground="@android:color/white"
+                    android:layout_gravity="right"
+                    android:background="@color/btnColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/search"
+                    android:clickable="true"
+                    />
+
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20sp"
+            android:layout_marginTop="25dp"
+
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginBottom="25dp"
+                >
+                <Button
+                    android:id="@+id/login_Btn_Fragment"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/loginbtn_style"
+                    android:text="@string/login_txt"
+                    android:textAllCaps="false"
+
+                    />
+                <Button
+                    android:id="@+id/Register_Btn_Fragment"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/registerbtn_style"
+                    android:text="انشاء حساب جديد"
+                    android:textAllCaps="false"
+
+                    />
+            </LinearLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Fragments_Container"
+                ></FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

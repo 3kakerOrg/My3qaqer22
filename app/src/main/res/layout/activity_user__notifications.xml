@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.omd.my3qaqer.User_Notifications"
+    android:background="@drawable/appbg"
+    >
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2e3a4a"
+        android:theme="@style/sd2"
+        >
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/user_notf_toolBar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="#2e3a4a"
+                app:title="Notifications"
+                />
+
+
+
+
+</android.support.design.widget.AppBarLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/user_notf_progressBar_container"
+        android:visibility="gone"
+        >
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/no_notf_txt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/no_notf_txt"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:visibility="gone"
+        />
+    <TextView
+        android:id="@+id/delete_all_userNotf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Delete All"
+        android:textColor="#2e3a4a"
+        />
+   <android.support.v7.widget.RecyclerView
+
+       android:id="@+id/user_notf_RecyclerView"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       ></android.support.v7.widget.RecyclerView>
+</LinearLayout>

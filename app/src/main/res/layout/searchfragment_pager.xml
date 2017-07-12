@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="120dp"
+        >
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:id="@+id/not_container"
+            android:visibility="visible"
+            android:layout_gravity="right|center"
+            >
+            <ImageView
+                android:id="@+id/user_notf"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@mipmap/notf_icon"
+                android:scaleType="centerCrop"
+                />
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/notf_txt"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="bottom|right"
+                android:background="@drawable/txt_bg"
+                android:text="1"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="8sp"
+                android:layout_marginTop="18dp"
+                android:layout_marginLeft="18dp"
+                android:textStyle="bold"
+                />
+        </FrameLayout>
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha=".4"
+            app:cardCornerRadius="5dp"
+
+            >
+            <android.support.v7.widget.SearchView
+                android:id="@+id/search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center"
+                android:gravity="right|center"
+                app:defaultQueryHint="اسم الدواء"
+                app:searchIcon="@drawable/search_icon_gray"
+                app:searchHintIcon="@drawable/search_icon_gray"
+                android:background="@drawable/edittext_login_pager"
+                app:queryBackground="@android:color/white"
+                app:closeIcon="@drawable/search_closeicon"
+                android:alpha=".8"
+                ></android.support.v7.widget.SearchView>
+
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+
+</LinearLayout>
+    <com.getbase.floatingactionbutton.FloatingActionButton
+        android:id="@+id/goto_allpost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fab_size="mini"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        app:fab_colorNormal="#e3704d"
+        app:fab_icon="@drawable/next"
+        app:fab_colorPressed="#ba4724"
+        />
+</RelativeLayout>

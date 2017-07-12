@@ -1,0 +1,60 @@
+<FrameLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+   <!-- <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="right"
+        android:padding="5dp"
+        >
+        <Button
+
+            android:background="@drawable/button_pressed_state2"
+            android:padding="5sp"
+            android:textSize="18sp"
+            android:text="الاقرب"
+            android:id="@+id/View_nearby_ResultBtn"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="right"
+            android:textColor="@android:color/white"
+
+            />
+        <Button
+
+            android:background="@drawable/button_pressed_state2"
+            android:padding="5sp"
+            android:textSize="18sp"
+            android:text="مشاهده النتائج"
+            android:id="@+id/ViewResultBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="right"
+            android:textColor="@android:color/white"
+
+            />
+
+    </LinearLayout>-->
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.omd.a3qaqer.Activites.MapsActivity"
+        />
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/fabBtn_menu_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fab_addButtonSize="mini"
+        android:layout_gravity="bottom|right"
+        ></com.getbase.floatingactionbutton.FloatingActionsMenu>
+</FrameLayout>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
+        >
+        <android.support.v7.widget.CardView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:cardElevation="5dp"
+            android:layout_marginRight="5dp"
+            >
+            <ImageView
+                android:id="@+id/Map_Drugimage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+
+                />
+        </android.support.v7.widget.CardView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/Map_Drugname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="اسم الدواء"
+                android:textSize="12sp"
+
+                />
+            <TextView
+                android:id="@+id/Map_Drugconentrate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="التركيز"
+                android:textSize="12sp"
+
+                />
+            <TextView
+                android:id="@+id/Map_Drugtype"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="النوع"
+                android:textSize="12sp"
+
+                />
+        </LinearLayout>
+        </LinearLayout>
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="5dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            >
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1.1"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_gravity="left"
+                >
+                <TextView
+                    android:id="@+id/Map_pharmacyname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:textDirection="rtl"
+                    android:inputType="textMultiLine"
+                    />
+                <TextView
+                    android:id="@+id/Map_pharmacylocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="right"
+                    android:textDirection="rtl"
+                    android:inputType="textMultiLine"
+                    />
+                <TextView
+                    android:id="@+id/Map_pharmacyphone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="right"
+                    android:textDirection="rtl"
+                    android:inputType="textMultiLine"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight=".9"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="اسم الصيدليه"
+                    android:gravity="right"
+                    android:textSize="12sp"
+                    android:textDirection="rtl"
+
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="right"
+                    android:textDirection="rtl"
+                    android:text="العنوان"
+                    android:inputType="textMultiLine"
+                    android:textSize="12sp"
+
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="right"
+                    android:textDirection="rtl"
+                    android:text="رقم المحمول"
+                    android:inputType="textMultiLine"
+                    android:textSize="12sp"
+
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

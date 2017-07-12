@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.omd.my3qaqer.all_drugs">
+<android.support.design.widget.AppBarLayout
+    android:id="@+id/appBar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="true"
+    android:background="#42a5f5"
+    android:theme="@style/sd2"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        >
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/all_drug_toolBar"
+            android:layout_width="0dp"
+            android:layout_weight=".3"
+            android:layout_height="?attr/actionBarSize"
+
+            ></android.support.v7.widget.Toolbar>
+        <android.support.v7.widget.SearchView
+            android:id="@+id/all_drug_searchview"
+            android:layout_width="0dp"
+            android:layout_weight="1.7"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:gravity="right"
+            android:visibility="gone"
+
+            ></android.support.v7.widget.SearchView>
+    </LinearLayout>
+
+</android.support.design.widget.AppBarLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appBar"
+        >
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/all_drug_Recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            >
+        </android.support.v7.widget.RecyclerView>
+
+        <com.getbase.floatingactionbutton.FloatingActionsMenu
+            android:id="@+id/fab_menu_drug"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            app:fab_addButtonSize="mini"
+            app:fab_expandDirection="up"
+            ></com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/no_drug_txt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/no_drug_txt"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:layout_below="@+id/appBar"
+        android:visibility="gone"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/allDrugs_ProgressBar_Container"
+        android:visibility="gone"
+        android:layout_below="@+id/appBar"
+        >
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+
+            />
+
+</RelativeLayout>
+</RelativeLayout>

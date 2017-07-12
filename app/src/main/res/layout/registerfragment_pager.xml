@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fitsSystemWindows="true"
+    >
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    >
+    <EditText
+        android:layout_marginTop="50dp"
+        android:id="@+id/userName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext_login_pager"
+        android:hint="اسم الصيدليه"
+        android:padding="15dp"
+        android:textColorHint="@color/gray"
+        android:textColor="@color/gray"
+        android:alpha=".4"
+        android:textDirection="rtl"
+        android:drawableRight="@drawable/parmacyname_icon"
+        android:inputType="textPersonName"
+        android:gravity="right|center"
+        android:layout_marginBottom="10dp"
+        android:textSize="14sp"
+        android:lines="1"
+        android:maxLines="1"
+        android:scrollHorizontally="true"
+
+        />
+    <EditText
+        android:id="@+id/userPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="رقم المحمول"
+        android:padding="15dp"
+        android:textDirection="rtl"
+        android:drawableRight="@drawable/phone_icon"
+        android:inputType="phone"
+        android:maxLength="11"
+        android:gravity="right|center"
+        android:layout_marginBottom="10dp"
+        android:textSize="14sp"
+        android:lines="1"
+        android:maxLines="1"
+        android:scrollHorizontally="true"
+        android:textColorHint="@color/gray"
+        android:textColor="@color/gray"
+        android:alpha=".4"
+        android:background="@drawable/edittext_login_pager"
+
+        />
+    <EditText
+        android:id="@+id/userPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="كلمه المرور لاتقل عن 6 احرف او ارقام"
+        android:padding="15dp"
+        android:textDirection="rtl"
+        android:drawableRight="@drawable/password_icon"
+        android:inputType="textPassword"
+        android:gravity="right|center"
+        android:layout_marginBottom="10dp"
+        android:textSize="14sp"
+        android:lines="1"
+        android:maxLines="1"
+        android:scrollHorizontally="true"
+        android:textColorHint="@color/gray"
+        android:textColor="@color/gray"
+        android:alpha=".4"
+        android:background="@drawable/edittext_login_pager"
+
+
+        />
+
+    <EditText
+        android:id="@+id/userLicence"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="رقم الرخصه"
+        android:padding="15dp"
+        android:textDirection="rtl"
+        android:drawableRight="@drawable/pharmacy_licence"
+        android:gravity="right|center"
+        android:layout_marginBottom="10dp"
+        android:textSize="14sp"
+        android:lines="1"
+        android:maxLines="1"
+        android:scrollHorizontally="true"
+        android:textColorHint="@color/gray"
+        android:textColor="@color/gray"
+        android:alpha=".4"
+        android:background="@drawable/edittext_login_pager"
+
+
+        />
+
+
+    <EditText
+        android:id="@+id/userLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="العنوان"
+        android:padding="15dp"
+        android:textDirection="rtl"
+        android:drawableRight="@drawable/pharmacy_location"
+        android:gravity="right|center"
+        android:layout_marginBottom="10dp"
+        android:textSize="14sp"
+        android:lines="1"
+        android:maxLines="1"
+        android:scrollHorizontally="true"
+        android:textColorHint="@color/gray"
+        android:textColor="@color/gray"
+        android:alpha=".4"
+        android:background="@drawable/edittext_login_pager"
+
+        />
+
+    <Button
+        android:id="@+id/Regiser_registerBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/create_account_txt"
+        android:padding="15dp"
+        android:background="@drawable/btnlogin_pressed_state"
+        android:textSize="18sp"
+        android:layout_marginBottom="80dp"
+        android:textColor="@android:color/white"
+
+        />
+</LinearLayout>
+    </ScrollView>

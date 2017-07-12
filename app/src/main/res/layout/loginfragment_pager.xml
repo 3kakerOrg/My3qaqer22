@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp">
+            <EditText
+                android:id="@+id/Login_userPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_login_pager"
+                android:hint="ادخل رقم المحمول"
+                android:padding="15dp"
+                android:textColorHint="@color/gray"
+                android:textColor="@color/gray"
+                android:alpha=".4"
+                android:drawableRight="@drawable/phone_icon"
+                android:gravity="right|center"
+                android:layout_marginTop="90dp"
+                android:scrollHorizontally="true"
+                android:lines="1"
+                android:inputType="phone"
+                android:maxLength="11"
+                />
+            <EditText
+                android:id="@+id/Login_userPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_login_pager"
+                android:hint="ادخل كلمه المرور"
+                android:padding="15dp"
+                android:textColorHint="@color/gray"
+                android:textColor="@color/gray"
+                android:alpha=".4"
+                android:drawableRight="@drawable/password_icon"
+                android:gravity="right|center"
+                android:layout_marginTop="5dp"
+                android:scrollHorizontally="true"
+                android:lines="1"
+                android:inputType="textPassword"
+                />
+            <CheckBox
+                android:id="@+id/remember_me_chechbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="15dp"
+                android:text="Remember Me"
+                android:textColor="@android:color/white"
+                app:buttonTint="#e3704d"
+                android:checked="false"
+                />
+            <Button
+                android:id="@+id/Login_logInBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btnlogin_pressed_state"
+                android:layout_marginTop="30dp"
+                android:text="تسجيل الدخول"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:padding="15dp"
+
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>
