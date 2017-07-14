@@ -4,6 +4,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
+import com.example.omd.my3qaqer.fragments.searchFragment_pager;
+
 /**
  * Created by Delta on 02/07/2017.
  */

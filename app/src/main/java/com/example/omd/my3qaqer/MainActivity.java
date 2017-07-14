@@ -1,58 +1,47 @@
 package com.example.omd.my3qaqer;
 
+import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.SearchView;
+import android.text.TextUtils;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.example.omd.my3qaqer.fragments.MainFragment;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.io.Serializable;
+import java.text.Bidi;
+import java.util.ArrayList;
+import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+import butterknife.OnTouch;
 
 public class MainActivity extends AppCompatActivity {
-    private TabLayout mTab;
-    private ViewPager mViewPager;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        init_View();
-    }
-
-    private void init_View() {
-        mTab = (TabLayout) findViewById(R.id.mTab);
-        mViewPager = (ViewPager) findViewById(R.id.mViewPager);
-        mTab.addTab(mTab.newTab().setText("بحث عن دواء"));
-        mTab.addTab(mTab.newTab().setText("تسجيل الدخول"));
-        mTab.addTab(mTab.newTab().setText("انشاء حساب جديد"));
-
-        //////////////////////////////////////////////////////
-        final PagerAdapter adapter = new PagerAdapter(getSupportFragmentManager(), mTab.getTabCount());
-        mViewPager.setAdapter(adapter);
-        mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(mTab));
-        mTab.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                mViewPager.setCurrentItem(tab.getPosition());
-            }
-
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-
-            }
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-
-            }
-        });
-    }
-
-    @Override
-    public void onBackPressed()
-    {
-        super.onBackPressed();
-        Intent intent = new Intent(Intent.ACTION_MAIN);
-        intent.addCategory(Intent.CATEGORY_HOME);
-        startActivity(intent);
+        getSupportFragmentManager().beginTransaction()
+                .add(android.R.id.content, new MainFragment()).commit();
     }
 
 }
