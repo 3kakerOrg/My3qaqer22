@@ -1,4 +1,4 @@
-package com.example.omd.my3qaqer;
+package com.example.omd.my3qaqer.fragments;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -15,6 +15,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.omd.my3qaqer.Firebase_DataBase_Holder;
+import com.example.omd.my3qaqer.Flag;
+import com.example.omd.my3qaqer.GpsLoc;
+import com.example.omd.my3qaqer.Location_Model;
+import com.example.omd.my3qaqer.Pharmacy_Model;
+import com.example.omd.my3qaqer.Profile;
+import com.example.omd.my3qaqer.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;

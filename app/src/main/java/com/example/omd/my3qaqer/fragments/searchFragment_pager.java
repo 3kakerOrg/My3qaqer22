@@ -1,4 +1,4 @@
-package com.example.omd.my3qaqer;
+package com.example.omd.my3qaqer.fragments;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -20,6 +20,17 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.omd.my3qaqer.All_Posts;
+import com.example.omd.my3qaqer.Drug_Model;
+import com.example.omd.my3qaqer.Firebase_DataBase_Holder;
+import com.example.omd.my3qaqer.Flag;
+import com.example.omd.my3qaqer.MapsActivity;
+import com.example.omd.my3qaqer.Notification_Model;
+import com.example.omd.my3qaqer.Notifications_readed_Model;
+import com.example.omd.my3qaqer.PhoneNumber;
+import com.example.omd.my3qaqer.Profile;
+import com.example.omd.my3qaqer.R;
+import com.example.omd.my3qaqer.User_Notifications;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;

@@ -62,6 +62,8 @@
     <string name="pharmacy_phone">رقم المحمول : </string>
     <string name="no_notf_txt">لايوجد اي اشعارات لعرضها</string>
     <string name="no_drug_txt">لايوجد اي ادويه لعرضها</string>
+    <string name="loginText">تسجيل الدخول</string>
+    <string name="registerText">  انشاء حساب صيدليه</string>
 
     <array name="spinner">
         <item>النوع</item>
@@ -69,6 +71,9 @@
         <item>شراب</item>
         <item>حقن</item>
     </array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
 
