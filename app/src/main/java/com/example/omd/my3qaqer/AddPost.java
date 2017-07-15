@@ -208,10 +208,6 @@ public class AddPost extends AppCompatActivity {
                 Toast.makeText(AddPost.this,getResources().getString(R.string.checkDrugtype), Toast.LENGTH_SHORT).show();
 
             }
-            else if (ImageUri==null)
-            {
-                Toast.makeText(AddPost.this,getResources().getString(R.string.checkDrugimage), Toast.LENGTH_SHORT).show();
-            }
             else
                 {
                     if (PhoneNumber.getPhoneNumber()==null||PhoneNumber.getPhoneNumber().isEmpty())
