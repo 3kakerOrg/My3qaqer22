@@ -5,6 +5,7 @@ import android.app.Service;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -12,6 +13,7 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.provider.Settings;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
 
 /**
  * Created by Delta on 17/06/2017.
@@ -44,6 +46,7 @@ public class GpsLoc extends Service implements LocationListener {
     public void onProviderDisabled(String s) {
 
     }
+
     String GPSProvider = LocationManager.GPS_PROVIDER;
     String NetworkProvider = LocationManager.NETWORK_PROVIDER;
     Location mLocation;
@@ -71,6 +74,15 @@ public class GpsLoc extends Service implements LocationListener {
 
                 mcanGetLocation = true;
                 if (isNetworkEnabled) {
+                    if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                        // TODO: Consider calling
+                        //    ActivityCompat#requestPermissions
+                        // here to request the missing permissions, and then overriding
+                        //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+                        //                                          int[] grantResults)
+                        // to handle the case where the user grants the permission. See the documentation
+                        // for ActivityCompat#requestPermissions for more details.
+                    }
                     mLocationManager.requestLocationUpdates(NetworkProvider, 0, 0, this);
                     if (mLocationManager !=null){
                         mLocation = mLocationManager.getLastKnownLocation(NetworkProvider);
@@ -131,20 +143,21 @@ public class GpsLoc extends Service implements LocationListener {
     public void ShowAlertDialog(Context context)
     {
         final AlertDialog.Builder dialog = new AlertDialog.Builder(context);
-        dialog.setTitle("Settings");
-        dialog.setMessage("Gps is not enable Do you want open ?");
-        dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+        dialog.setTitle("تنبيه");
+        dialog.setMessage("من فضلك افتح الGPS ");
+        dialog.setPositiveButton("فتح الاعدادات", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
                 mContext.startActivity(intent);
             }
         });
-        dialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+        dialog.setNegativeButton("الغاء", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
             }
         });
+        dialog.show();
     }
 
 }

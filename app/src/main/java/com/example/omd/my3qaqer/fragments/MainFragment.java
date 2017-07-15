@@ -32,6 +32,8 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
+import static butterknife.ButterKnife.bind;
+
 
 public class MainFragment extends Fragment {
     private ProgressDialog mDialog;
@@ -49,7 +51,8 @@ public class MainFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_main, container, false);
-        ButterKnife.bind(getActivity());
+        ButterKnife.bind(this,view);
+       // Viewbind(view);
         dRef = FirebaseDatabase.getInstance().getReference();
         search.setOnSearchClickListener(new View.OnClickListener() {
             @Override
@@ -64,7 +67,11 @@ public class MainFragment extends Fragment {
         return view;
     }
 
-
+    private void Viewbind(View view) {
+        search = (SearchView) view.findViewById(R.id.search);
+        loginBtn = (Button) view.findViewById(R.id.loginBtnId);
+        registerBtn = (Button) view.findViewById(R.id.registerBtnId);
+    }
 
 
     @OnClick(R2.id.loginBtnId)
@@ -75,14 +82,12 @@ public class MainFragment extends Fragment {
 
     @OnClick(R2.id.registerBtnId)
     void gotoRegisterFragment() {
-       getActivity(). getSupportFragmentManager().beginTransaction()
+        getActivity().getSupportFragmentManager().beginTransaction()
                 .add(android.R.id.content, new Register_Fragment()).commit();
     }
 
 
-
-    private void search_Action(final SearchView search)
-    {
+    private void search_Action(final SearchView search) {
 
         search.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
@@ -90,17 +95,14 @@ public class MainFragment extends Fragment {
                 Flag.setFlag(true);
                 Flag.setLocflag(true);
                 mDialog.show();
-                Bidi bidi = new Bidi(query,Bidi.DIRECTION_DEFAULT_LEFT_TO_RIGHT);
-                if (bidi.getBaseLevel()==1)
-                {
+                Bidi bidi = new Bidi(query, Bidi.DIRECTION_DEFAULT_LEFT_TO_RIGHT);
+                if (bidi.getBaseLevel() == 1) {
                     Toast.makeText(getActivity(), "يرجى كتابه الدواء بالغه الانجليزيه", Toast.LENGTH_SHORT).show();
                     Flag.setFlag(false);
                     Flag.setLocflag(false);
                     mDialog.dismiss();
-                    search.setQuery("",false);
-                }
-                else
-                {
+                    search.setQuery("", false);
+                } else {
                     Flag.setLocflag(true);
                     Search_aboutLocation_Drugs(query);
 
@@ -117,8 +119,7 @@ public class MainFragment extends Fragment {
         });
     }
 
-    private void Search_aboutLocation_Drugs(final String query)
-    {
+    private void Search_aboutLocation_Drugs(final String query) {
         if (!query.equals(null) && !query.isEmpty()) {
             DatabaseReference drugRef = dRef.child(Firebase_DataBase_Holder.drugs_Info);
             drugRef.addValueEventListener(new ValueEventListener() {
@@ -130,42 +131,33 @@ public class MainFragment extends Fragment {
                         List<String> pharmacyKeys = new ArrayList<String>();
                         List<Drug_Model> Drag_List = new ArrayList<Drug_Model>();
 
-                        if (Flag.isFlag()== true) {
+                        if (Flag.isFlag() == true) {
 
-                            for (DataSnapshot ds1 :dataSnapshot.getChildren())
-                            {
-                                for (DataSnapshot ds:ds1.getChildren())
-                                {
+                            for (DataSnapshot ds1 : dataSnapshot.getChildren()) {
+                                for (DataSnapshot ds : ds1.getChildren()) {
 
                                     Drug_Model d_Model = ds.getValue(Drug_Model.class);
-                                    String drug_name_concentrate = d_Model.getDrug_name().toString().toLowerCase()+" "+d_Model.getDrug_concentration().toString().toLowerCase();
-                                    String drug_name_concentrate_type = d_Model.getDrug_name().toString().toLowerCase()+" "+d_Model.getDrug_concentration().toString().toLowerCase()+" "+d_Model.getDrug_type().toString().toLowerCase();
+                                    String drug_name_concentrate = d_Model.getDrug_name().toString().toLowerCase() + " " + d_Model.getDrug_concentration().toString().toLowerCase();
+                                    String drug_name_concentrate_type = d_Model.getDrug_name().toString().toLowerCase() + " " + d_Model.getDrug_concentration().toString().toLowerCase() + " " + d_Model.getDrug_type().toString().toLowerCase();
 
                                     if (d_Model.getDrug_name().toString().toLowerCase().equals(query.toString().toLowerCase())) {
                                         pharmacyKeys.add(d_Model.getDrug_pharmacyid());
                                         Drag_List.add(d_Model);
 
-                                    }
-                                    else if (drug_name_concentrate.equals(query.toString().toLowerCase()))
-                                    {
+                                    } else if (drug_name_concentrate.equals(query.toString().toLowerCase())) {
                                         pharmacyKeys.add(d_Model.getDrug_pharmacyid());
                                         Drag_List.add(d_Model);
-                                    }
-                                    else if (drug_name_concentrate_type.equals(query.toString().toLowerCase()))
-                                    {
+                                    } else if (drug_name_concentrate_type.equals(query.toString().toLowerCase())) {
                                         pharmacyKeys.add(d_Model.getDrug_pharmacyid());
                                         Drag_List.add(d_Model);
                                     }
                                 }
                             }
-                            if (pharmacyKeys.size()>0)
-                            {
+                            if (pharmacyKeys.size() > 0) {
                                 Flag.setLocflag(true);
                                 SetUp_Intent(Drag_List, pharmacyKeys);
-                                search.setQuery("",false);
+                                search.setQuery("", false);
                                 search.setIconified(true);
-
-
 
 
                             }
@@ -185,7 +177,7 @@ public class MainFragment extends Fragment {
 
                     } else {
                         mDialog.dismiss();
-                        search.setQuery("",false);
+                        search.setQuery("", false);
                         search.setIconified(true);
                         Flag.setFlag(false);
                         Flag.setLocflag(false);
@@ -198,9 +190,7 @@ public class MainFragment extends Fragment {
 
                 }
             });
-        }
-        else
-        {
+        } else {
             Flag.setLocflag(false);
             search.setQuery("", false);
             search.setIconified(true);
@@ -210,10 +200,10 @@ public class MainFragment extends Fragment {
 
 
     }
-    private void SetUp_Intent(List<Drug_Model> drug_model,List<String > pharmacyKeys)
-    {
+
+    private void SetUp_Intent(List<Drug_Model> drug_model, List<String> pharmacyKeys) {
         mDialog.dismiss();
-        Intent intent = new Intent(getActivity(),Result_Activity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        Intent intent = new Intent(getActivity(), Result_Activity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         intent.putExtra("drugmodel", (Serializable) drug_model);
         intent.putExtra("pharmacyKeys", (Serializable) pharmacyKeys);
         getActivity().startActivity(intent);
