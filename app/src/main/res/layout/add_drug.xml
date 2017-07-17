@@ -7,6 +7,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradiant_color"
     tools:context="com.example.omd.my3qaqer.Profile">
 
             <LinearLayout
@@ -15,57 +16,67 @@
                 android:orientation="vertical"
                 >
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/addDrug_txt"
-                    android:gravity="center"
-                    android:textSize="18sp"
+                    android:layout_gravity="center"
+                    android:textSize="20sp"
+                    android:padding="10dp"
+                    android:background="@android:color/holo_blue_light"
                     android:layout_marginBottom="50dp"
                     android:layout_marginTop="15dp"
-                    android:textColor="@android:color/holo_blue_light"
+                    android:textColor="@android:color/white"
                     />
 
-                <android.support.design.widget.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+
+                <EditText
                     android:hint="اسم الدواء"
-                    android:textColorHint="@android:color/holo_blue_light"
-
-                    >
-                    <EditText
-                        android:id="@+id/Drug_name"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="10dp"
-                        android:inputType="text"
-                        android:lines="1"
-                        android:scrollHorizontally="true"
-                        android:layout_marginBottom="5dp"
-                        android:gravity="right"
-                        android:background="@drawable/edittext_style"
-                        />
-                </android.support.design.widget.TextInputLayout>
-
-                <android.support.design.widget.TextInputLayout
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/transparent"
+                    android:drawablePadding="8dp"
+                    android:padding="10dp"
+                    android:id="@+id/Drug_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="التركيز"
-                    android:textColorHint="@android:color/holo_blue_light"
+                    android:inputType="text"
+                    android:lines="1"
+                    android:scrollHorizontally="true"
                     android:layout_marginBottom="5dp"
-                    >
-                    <EditText
-                        android:id="@+id/Drug_concentrate"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="10dp"
-                        android:lines="1"
-                        android:scrollHorizontally="true"
-                        android:layout_marginBottom="5dp"
-                        android:gravity="right"
-                        android:background="@drawable/edittext_style"
+                    android:gravity="right"
+                    android:textColorHint="@color/white"
+                    android:textSize="20sp" />
 
-                        />
-                </android.support.design.widget.TextInputLayout>
+
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/white_greyish" />
+
+                <EditText
+                    android:hint="التركيز"
+                    android:id="@+id/Drug_concentrate"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@android:color/transparent"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical"
+                    android:inputType="phone"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="20sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/white_greyish" />
+
+
+
+
 
                 <Spinner
                     android:id="@+id/spinner"
@@ -74,7 +85,7 @@
                     android:gravity="right"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
-                    app:backgroundTint="@android:color/holo_blue_dark"
+                    app:backgroundTint="@color/white"
                     ></Spinner>
                <RelativeLayout
                    android:layout_width="match_parent"
@@ -96,7 +107,9 @@
                        android:layout_centerVertical="true"
                        android:layout_marginRight="35dp"
                        android:text="اضافه صوره"
-                       android:textColor="@android:color/holo_blue_light"
+                       android:textSize="20dp"
+
+                       android:textColor="@color/white"
 
                        />
                    <de.hdodenhof.circleimageview.CircleImageView
@@ -108,16 +121,20 @@
                        android:scaleType="centerCrop"
                        />
                </RelativeLayout>
+
+
                 <Button
                     android:id="@+id/addDrugBtn"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/button_pressed_state3"
                     android:text="اضافه دواء جديد"
-                    android:textSize="18sp"
-                    android:padding="20dp"
+                    android:background="@drawable/button_pressed_state3"
+                    android:layout_width="350dp"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
                     android:textColor="@android:color/white"
-                    />
+                    android:layout_marginTop="25dp"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 

@@ -6,7 +6,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         tools:context="com.example.omd.my3qaqer.AddPost"
-        android:background="@color/grayDark"
+        android:background="@drawable/gradiant_color"
     >
         <android.support.design.widget.AppBarLayout
             android:layout_width="match_parent"
@@ -51,63 +51,121 @@
                 android:padding="16dp"
                 >
 
+
                 <EditText
-                    android:id="@+id/addpost_userName"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/edittext_style"
                     android:hint="الاسم"
-                    android:padding="10dp"
-                    android:layout_marginBottom="5dp"
-                    android:inputType="textPersonName"
-                    android:gravity="right|center"
-                    />
-                <EditText
-                    android:id="@+id/addpost_userPhone"
-                    android:layout_width="match_parent"
+                    android:id="@+id/addpost_userName"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/edittext_style"
-                    android:hint="رقم المحمول"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/transparent"
+                    android:drawableRight="@drawable/user"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical"
+                    android:inputType="textCapWords"
                     android:padding="10dp"
-                    android:layout_marginBottom="5dp"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="16sp" />
+
+
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/white_greyish" />
+
+                <EditText
+                    android:hint="رقم المحمول"
+                    android:id="@+id/addpost_userPhone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@android:color/transparent"
+                    android:drawableRight="@drawable/phone"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical"
                     android:inputType="phone"
-                    android:gravity="right|center"
-                    android:maxLength="11"
-                    />
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/white_greyish" />
                 <EditText
                     android:id="@+id/addpost_userAddress"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/edittext_style"
                     android:hint="العنوان"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@android:color/transparent"
+                    android:drawableRight="@drawable/location"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical"
+                    android:inputType="textCapWords"
                     android:padding="10dp"
-                    android:layout_marginBottom="5dp"
-                    android:gravity="right|center"
-                    android:inputType="textAutoComplete"
-                    />
-                <EditText
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="16sp" />
 
-                    android:id="@+id/addpost_drugName"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/edittext_style"
-                    android:hint="@string/drug_name"
-                    android:padding="10dp"
-                    android:layout_marginBottom="5dp"
-                    android:gravity="right|center"
-                    android:inputType="textAutoCorrect"
-                    />
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/white_greyish" />
                 <EditText
-                    android:id="@+id/addpost_drugConcentrate"
-                    android:layout_width="match_parent"
+                    android:hint="اسم الدواء"
+                    android:id="@+id/addpost_drugName"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/edittext_style"
-                    android:hint="@string/concentrateDrug_txt"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/transparent"
+                    android:drawableRight="@drawable/drugname"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical"
+                    android:inputType="textCapWords"
                     android:padding="10dp"
-                    android:layout_marginBottom="5dp"
-                    android:gravity="right|center"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="16sp" />
+
+
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/white_greyish" />
+                <EditText
+                    android:hint="تركيز الدواء"
+                    android:id="@+id/addpost_drugConcentrate"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/transparent"
+                    android:drawableRight="@drawable/tark"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical"
                     android:inputType="textAutoComplete"
-                    />
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="16sp" />
+
+
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/white_greyish" />
+
+
                 <Spinner
                     android:id="@+id/addpost_drugType"
                     android:layout_marginTop="10dp"
@@ -128,6 +186,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="اضافه صوره للدواء"
+                        android:textColor="@color/white"
                         android:textSize="18sp"
                         />
                     <ImageView
@@ -142,9 +201,10 @@
                     android:id="@+id/postBtn"
                     android:layout_width="150dp"
                     android:layout_height="35dp"
-                    android:background="@drawable/post_btn_pressed_state"
+                    android:background="@drawable/button_pressed_state"
                     android:text="post"
                     android:layout_gravity="right"
+                    android:textColor="@color/white"
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="20dp"
                     />

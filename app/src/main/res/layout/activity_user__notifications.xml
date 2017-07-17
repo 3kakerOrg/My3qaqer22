@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.omd.my3qaqer.User_Notifications"
-    android:background="@drawable/appbg"
+    android:background="@drawable/gradiant_color"
     >
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"

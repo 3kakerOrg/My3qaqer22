@@ -5,6 +5,7 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -32,6 +33,8 @@ import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
 import java.io.ByteArrayOutputStream;
+
+import developer.shivam.library.DiagonalView;
 
 public class Profile extends AppCompatActivity {
     private KenBurnsView pharmacy_image;
@@ -63,7 +66,7 @@ public class Profile extends AppCompatActivity {
         upload_Pharmacyimage(update_pharmacyimage);
         update_pharmacyinfoBtn_Action(update_pharmacyinfoBtn);
         UpdatePharmacy_Info(update_pharmacyinfo);
-        Get_Pharmacy_informations(mAuth.getCurrentUser().getUid().toString());
+       Get_Pharmacy_informations(mAuth.getCurrentUser().getUid().toString());
         GetNotifications_Counts(mAuth.getCurrentUser().getUid().toString(),not_txt);
         ShowAllNotifications(not_Btn);
 
@@ -71,6 +74,12 @@ public class Profile extends AppCompatActivity {
 
     private void init_View()
     {
+        DiagonalView diagonalView = new DiagonalView(this);
+        diagonalView.setAngle(15);
+        diagonalView.setDiagonalGravity(DiagonalView.LEFT);
+     //   diagonlaView.setDiagonalColor(Color.BLACK);
+        diagonalView.setBackgroundColor(Color.WHITE);
+
         pharmacy_image      = (KenBurnsView) findViewById(R.id.pharmacy_image);
         pharmacy_name       = (TextView) findViewById(R.id.pharmacy_name);
         pharmacy_location   = (TextView) findViewById(R.id.pharmacy_location);

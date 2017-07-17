@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:installLocation="preferExternal"
     package="com.example.omd.my3qaqer">
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -26,7 +27,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".Login_Register" />
         <activity
-            android:name=".Profile"
+            android:name=".splash"
             android:label="@string/title_activity_profile"
             android:theme="@style/AppTheme.NoActionBar" />
         <!--
@@ -56,7 +57,7 @@
         <activity
             android:name=".User_Notifications"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".splash">
+        <activity android:name=".Profile">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

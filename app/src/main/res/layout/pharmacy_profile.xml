@@ -237,3 +237,253 @@
     </RelativeLayout>
 
 </RelativeLayout>
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:diagonal="http://schemas.android.com/apk/res-auto"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--android:id="@+id/activity_main"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:background="#FFFFFF"-->
+    <!--tools:context=".Profile">-->
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:id="@+id/profile_ProgressBar_Container"-->
+        <!--android:visibility="gone"-->
+        <!--&gt;-->
+        <!--<ProgressBar-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerInParent="true"-->
+
+            <!--/>-->
+    <!--</RelativeLayout>-->
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:visibility="visible"-->
+        <!--android:id="@+id/profile_content_Container"-->
+        <!--&gt;-->
+
+        <!--<android.support.v7.widget.CardView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--app:cardElevation="5dp"-->
+            <!--android:id="@+id/ph_info"-->
+            <!--android:layout_marginBottom="10dp"-->
+            <!--app:contentPaddingTop="50dp"-->
+            <!--app:contentPaddingBottom="20dp"-->
+            <!--&gt;-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="vertical"-->
+                <!--&gt;-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:weightSum="2"-->
+                    <!--&gt;-->
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1.4"-->
+                        <!--android:orientation="vertical"-->
+                        <!--android:layout_height="wrap_content">-->
+                        <!--<TextView-->
+                            <!--android:id="@+id/pharmacy_name"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:textSize="14sp"-->
+                            <!--android:layout_gravity="right"-->
+                            <!--android:padding="2dp"-->
+                            <!--android:ellipsize="end"-->
+                            <!--android:lines="1"-->
+                            <!--/>-->
+                        <!--<TextView-->
+                            <!--android:id="@+id/pharmacy_location"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:textSize="14sp"-->
+                            <!--android:layout_gravity="right"-->
+                            <!--android:padding="2dp"-->
+                            <!--android:ellipsize="end"-->
+                            <!--android:lines="1"-->
+                            <!--/>-->
+                        <!--<TextView-->
+                            <!--android:id="@+id/pharmacy_phone"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+
+                            <!--android:textSize="14sp"-->
+                            <!--android:gravity="right"-->
+                            <!--android:layout_gravity="right"-->
+                            <!--android:padding="2dp"-->
+                            <!--android:ellipsize="end"-->
+                            <!--android:lines="1"-->
+                            <!--/>-->
+                    <!--</LinearLayout>-->
+
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight=".6"-->
+                        <!--android:orientation="vertical"-->
+                        <!--android:layout_height="wrap_content">-->
+                        <!--<TextView-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:text="اسم الصيدليه : "-->
+                            <!--android:textSize="14sp"-->
+                            <!--android:layout_gravity="right"-->
+                            <!--android:padding="2dp"-->
+                            <!--android:ellipsize="end"-->
+                            <!--/>-->
+                        <!--<TextView-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:text="العنوان : "-->
+                            <!--android:textSize="14sp"-->
+                            <!--android:layout_gravity="right"-->
+                            <!--android:padding="2dp"-->
+                            <!--android:ellipsize="end"-->
+                            <!--/>-->
+                        <!--<TextView-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:text="رقم المحمول : "-->
+                            <!--android:textSize="14sp"-->
+                            <!--android:gravity="right"-->
+                            <!--android:layout_gravity="right"-->
+                            <!--android:padding="2dp"-->
+                            <!--android:ellipsize="end"-->
+                            <!--/>-->
+                    <!--</LinearLayout>-->
+
+                <!--</LinearLayout>-->
+
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:weightSum="2"-->
+                    <!--android:layout_marginTop="40dp"-->
+                    <!--&gt;-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/update_pharmacyimage"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1.4"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="إضافه صوره"-->
+                        <!--android:layout_gravity="center"-->
+                        <!--android:gravity="right|center"-->
+                        <!--android:drawableRight="@drawable/upload"-->
+                        <!--/>-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/update_pharmacyinfo"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight=".6"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="تعديل"-->
+                        <!--android:layout_gravity="center|right"-->
+                        <!--android:gravity="right"-->
+                        <!--android:padding="5dp"-->
+
+                        <!--/>-->
+                <!--</LinearLayout>-->
+
+
+            <!--</LinearLayout>-->
+
+
+
+
+        <!--</android.support.v7.widget.CardView>-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="vertical"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--&gt;-->
+            <!--<com.getbase.floatingactionbutton.FloatingActionsMenu-->
+                <!--android:id="@+id/fabBtn_menu"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--app:fab_expandDirection="up"-->
+                <!--app:fab_labelsPosition="left"-->
+                <!--app:fab_addButtonStrokeVisible="false"-->
+                <!--app:fab_addButtonSize="mini"-->
+
+                <!--&gt;-->
+
+            <!--</com.getbase.floatingactionbutton.FloatingActionsMenu>-->
+            <!--<FrameLayout-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:id="@+id/not_container"-->
+                <!--android:visibility="visible"-->
+                <!--android:layout_gravity="bottom|right"-->
+                <!--android:layout_marginRight="10dp"-->
+                <!--android:layout_marginBottom="10dp"-->
+                <!--&gt;-->
+                <!--<ImageView-->
+                    <!--android:visibility="visible"-->
+                    <!--android:id="@+id/not_Btn"-->
+                    <!--android:layout_width="42dp"-->
+                    <!--android:layout_height="42dp"-->
+                    <!--android:src="@mipmap/notf"-->
+                    <!--android:scaleType="centerCrop"-->
+                    <!--/>-->
+                <!--<TextView-->
+                    <!--android:visibility="gone"-->
+                    <!--android:id="@+id/not_txt"-->
+                    <!--android:layout_width="17dp"-->
+                    <!--android:layout_height="17dp"-->
+                    <!--android:layout_gravity="bottom|right"-->
+                    <!--android:background="@drawable/txt_bg"-->
+                    <!--android:text="1"-->
+                    <!--android:gravity="center"-->
+                    <!--android:textColor="@android:color/white"-->
+                    <!--android:textSize="8sp"-->
+                    <!--/>-->
+            <!--</FrameLayout>-->
+        <!--</LinearLayout>-->
+    <!--</RelativeLayout>-->
+    <!--<developer.shivam.library.DiagonalView-->
+        <!--android:id="@+id/pharmacy_image"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="210dp"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:scaleType="centerCrop"-->
+        <!--android:src="@color/colorPrimary"-->
+        <!--diagonal:angle="30"-->
+        <!--android:elevation="5dp"-->
+        <!--diagonal:diagonalGravity="left|top" />-->
+
+
+    <!--<developer.shivam.library.DiagonalView-->
+        <!--android:id="@+id/diagonal_view"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="210dp"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:scaleType="centerCrop"-->
+        <!--android:src="@color/colorPrimary"-->
+        <!--diagonal:angle="30"-->
+        <!--android:elevation="10dp"-->
+        <!--diagonal:diagonalGravity="left|bottom" />-->
+<!--</RelativeLayout>-->
+
+
+
+

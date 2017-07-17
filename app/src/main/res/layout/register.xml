@@ -1,5 +1,162 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradiant_color"
+    android:padding="20dp" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="3qaqer"
+        android:textColor="@color/white_greyish"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:hint="اسم الصيدليه"
+        android:id="@+id/userName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/transparent"
+        android:drawableRight="@drawable/user"
+        android:drawablePadding="8dp"
+        android:gravity="center_vertical"
+        android:inputType="textCapWords"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="16sp" />
+
+
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/white_greyish" />
+
+    <EditText
+        android:hint="رقم المحمول"
+        android:id="@+id/userPhone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/transparent"
+        android:drawableRight="@drawable/phone"
+        android:drawablePadding="8dp"
+        android:gravity="center_vertical"
+        android:inputType="phone"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/white_greyish" />
+
+    <EditText
+        android:id="@+id/userLocation"
+        android:hint="المدينه"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/transparent"
+        android:drawableRight="@drawable/location"
+        android:drawablePadding="8dp"
+        android:gravity="center_vertical"
+        android:inputType="textCapWords"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/white_greyish" />
+
+    <EditText
+        android:id="@+id/userPassword"
+        android:hint="كلمه المرور لاتقل عن 6 احرف او ارقام"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right|center"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/transparent"
+        android:drawableRight="@drawable/password"
+        android:drawablePadding="8dp"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/white_greyish" />
+
+    <EditText
+        android:id="@+id/userLicence"
+        android:hint="رقم رخصة الصيدليه"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/transparent"
+        android:drawableRight="@drawable/confirm_password"
+        android:drawablePadding="8dp"
+        android:gravity="right"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/white_greyish" />
+
+    <Button
+        android:id="@+id/Regiser_registerBtn"
+        android:text="@string/create_account_txt"
+        android:background="@drawable/button_pressed_state"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        android:textColor="@drawable/gradiant_color"
+        android:layout_marginTop="25dp"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/already_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/already_user"
+        android:textColor="@color/white_greyish"
+        android:textSize="15sp" />
+
+</LinearLayout>
+
+<!--
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/stormCold"
@@ -11,11 +168,12 @@
         android:layout_height="wrap_content" />
 
     <EditText
+     android:hint="اسم الصيدليه"
         android:id="@+id/userName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/edittext_style"
-        android:hint="اسم الصيدليه"
+
         android:padding="5dp"
         android:textDirection="rtl"
         android:drawableRight="@mipmap/user"
@@ -28,11 +186,11 @@
 
         />
     <EditText
+            android:hint="رقم المحمول"
         android:id="@+id/userPhone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/edittext_style"
-        android:hint="رقم المحمول"
         android:padding="5dp"
         android:textDirection="rtl"
         android:drawableRight="@mipmap/phone"
@@ -47,10 +205,10 @@
         />
     <EditText
         android:id="@+id/userPassword"
+                android:hint="كلمه المرور لاتقل عن 6 احرف او ارقام"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/edittext_style"
-        android:hint="كلمه المرور لاتقل عن 6 احرف او ارقام"
         android:padding="5dp"
         android:gravity="right|center"
         android:textDirection="rtl"
@@ -65,10 +223,11 @@
 
     <EditText
         android:id="@+id/userLicence"
+                android:hint="رقم رخصة الصيدليه"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/edittext_style"
-        android:hint="رقم رخصة الصيدليه"
         android:padding="5dp"
         android:textDirection="rtl"
         android:drawableRight="@mipmap/licence"
@@ -82,10 +241,11 @@
 
     <EditText
         android:id="@+id/userLocation"
+                android:hint="المدينه"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/edittext_style"
-        android:hint="المدينه"
         android:padding="5dp"
         android:textDirection="rtl"
         android:drawableRight="@mipmap/locations"
@@ -98,13 +258,14 @@
 
     <Button
         android:id="@+id/Regiser_registerBtn"
+                android:text="@string/create_account_txt"
+        android:background="@drawable/button_pressed_state"
+
         android:layout_width="320dp"
         android:layout_gravity="center"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
-        android:text="@string/create_account_txt"
-        android:background="@drawable/button_pressed_state"
         android:textSize="20sp"
 
         />
-</LinearLayout>
+</LinearLayout>-->

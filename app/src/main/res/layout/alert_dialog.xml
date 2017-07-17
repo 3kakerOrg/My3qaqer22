@@ -2,7 +2,7 @@
 <LinearLayout
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
-
+android:background="@drawable/gradiant_color"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -30,6 +30,7 @@
         android:id="@+id/phone_container"
 
         >
+
         <EditText
             android:maxLength="11"
             android:id="@+id/alert_text_phone"
