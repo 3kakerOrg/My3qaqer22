@@ -66,7 +66,7 @@ public class Profile extends AppCompatActivity {
         upload_Pharmacyimage(update_pharmacyimage);
         update_pharmacyinfoBtn_Action(update_pharmacyinfoBtn);
         UpdatePharmacy_Info(update_pharmacyinfo);
-       Get_Pharmacy_informations(mAuth.getCurrentUser().getUid().toString());
+        Get_Pharmacy_informations(mAuth.getCurrentUser().getUid().toString());
         GetNotifications_Counts(mAuth.getCurrentUser().getUid().toString(),not_txt);
         ShowAllNotifications(not_Btn);
 
