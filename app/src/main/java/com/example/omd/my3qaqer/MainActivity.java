@@ -10,6 +10,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -42,15 +43,24 @@ FirebaseAuth auth;
         setContentView(R.layout.activity_main);
         auth=FirebaseAuth.getInstance();
        if(auth.getCurrentUser()!=null){
-           startActivity(new Intent(this, Profile.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
+          startActivity(new Intent(this, Profile.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
+           Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
        }
         getSupportFragmentManager().beginTransaction()
-                .add(android.R.id.content, new MainFragment()).commit();
+                .add(android.R.id.content, new MainFragment(),"main").commit();
     }
 
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
+        Fragment mainF = getSupportFragmentManager().findFragmentByTag("main");
+        if(mainF!=null){
+            super.onBackPressed();
+            Toast.makeText(this, " ", Toast.LENGTH_SHORT).show();
+        }else {
+            getSupportFragmentManager().beginTransaction()
+                    .add(android.R.id.content, new MainFragment()).commit();
+        }
+
 
     }
 }

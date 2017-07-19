@@ -19,5 +19,6 @@
     <color name="black">#000000</color>
     <color name="white_greyish">#EEEEEE</color>
     <color name="button_selectorcolor">#9E9E9E</color>
+    <color name="grdientColor">#9E9E9E</color>
 
 </resources>

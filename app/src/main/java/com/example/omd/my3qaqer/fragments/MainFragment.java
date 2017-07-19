@@ -52,7 +52,6 @@ public class MainFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_main, container, false);
         ButterKnife.bind(this,view);
-       // Viewbind(view);
         dRef = FirebaseDatabase.getInstance().getReference();
         search.setOnSearchClickListener(new View.OnClickListener() {
             @Override
@@ -66,13 +65,6 @@ public class MainFragment extends Fragment {
 
         return view;
     }
-
-    private void Viewbind(View view) {
-        search = (SearchView) view.findViewById(R.id.search);
-        loginBtn = (Button) view.findViewById(R.id.loginBtnId);
-        registerBtn = (Button) view.findViewById(R.id.registerBtnId);
-    }
-
 
     @OnClick(R2.id.loginBtnId)
     void gotoLoginFragment() {
