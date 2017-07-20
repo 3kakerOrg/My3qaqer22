@@ -69,13 +69,13 @@ public class MainFragment extends Fragment {
     @OnClick(R2.id.loginBtnId)
     void gotoLoginFragment() {
         getActivity().getSupportFragmentManager().beginTransaction()
-                .add(android.R.id.content, new login_Fragment()).commit();
+                .replace(android.R.id.content, new login_Fragment()).commit();
     }
 
     @OnClick(R2.id.registerBtnId)
     void gotoRegisterFragment() {
         getActivity().getSupportFragmentManager().beginTransaction()
-                .add(android.R.id.content, new Register_Fragment()).commit();
+                .replace(android.R.id.content, new Register_Fragment()).commit();
     }
 
 

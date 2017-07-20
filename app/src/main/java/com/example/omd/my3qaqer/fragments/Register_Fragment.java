@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.omd.my3qaqer.Firebase_DataBase_Holder;
@@ -41,17 +42,20 @@ import butterknife.OnClick;
 
 public class Register_Fragment extends Fragment {
     @BindView(R2.id.userName)
-     EditText userName;
+    EditText userName;
     @BindView(R2.id.userPhone)
-     EditText userPhone;
+    EditText userPhone;
     @BindView(R2.id.userPassword)
-     EditText userPassword;
+    EditText userPassword;
     @BindView(R2.id.userLicence)
-     EditText userLicence;
+    EditText userLicence;
     @BindView(R2.id.userLocation)
-     EditText userLocation;
+    EditText userLocation;
     @BindView(R2.id.Regiser_registerBtn)
-     Button registerBtn;
+    Button registerBtn;
+    @BindView(R2.id.already_user)
+    TextView already_user_text;
+
     Context mContext;
     FirebaseAuth mAuth;
     DatabaseReference dRef;
@@ -88,7 +92,7 @@ public class Register_Fragment extends Fragment {
     }
 
     @OnClick(R2.id.Regiser_registerBtn)
-     void SignUp() {
+    void SignUp() {
 
         final String username = userName.getText().toString();
         final String phone = userPhone.getText().toString();
@@ -176,6 +180,12 @@ public class Register_Fragment extends Fragment {
             }
 
         }
+    }
+
+    @OnClick(R2.id.already_user)
+    void gotologin() {
+        getActivity().getSupportFragmentManager().beginTransaction()
+                .replace(android.R.id.content, new login_Fragment()).commit();
     }
 
     @Override

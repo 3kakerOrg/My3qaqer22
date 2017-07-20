@@ -36,29 +36,29 @@ import butterknife.OnClick;
 import butterknife.OnTouch;
 
 public class MainActivity extends AppCompatActivity {
-FirebaseAuth auth;
+    FirebaseAuth auth;
+    private static final String MAIN_FRAG_TAG="main";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        auth=FirebaseAuth.getInstance();
-       if(auth.getCurrentUser()!=null){
-          startActivity(new Intent(this, Profile.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
-           Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
-       }
+        auth = FirebaseAuth.getInstance();
+        if (auth.getCurrentUser() != null) {
+            startActivity(new Intent(this, Profile.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
+            Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
+        }
         getSupportFragmentManager().beginTransaction()
-                .add(android.R.id.content, new MainFragment(),"main").commit();
+                .replace(android.R.id.content, new MainFragment(), MAIN_FRAG_TAG).commit();
     }
 
     @Override
     public void onBackPressed() {
-        Fragment mainF = getSupportFragmentManager().findFragmentByTag("main");
-        if(mainF!=null){
+        Fragment mainF = getSupportFragmentManager().findFragmentByTag(MAIN_FRAG_TAG);
+        if (mainF != null) {
             super.onBackPressed();
-            Toast.makeText(this, " ", Toast.LENGTH_SHORT).show();
-        }else {
+        } else {
             getSupportFragmentManager().beginTransaction()
-                    .add(android.R.id.content, new MainFragment()).commit();
+                    .replace(android.R.id.content, new MainFragment(),MAIN_FRAG_TAG).commit();
         }
 
 
