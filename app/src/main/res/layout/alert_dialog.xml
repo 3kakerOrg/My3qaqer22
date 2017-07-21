@@ -32,6 +32,28 @@ android:background="@drawable/gradiant_color"
         >
 
         <EditText
+            android:hint="@string/phone_txt"
+            android:id="@+id/alert_text_phone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/gradiant_color"
+            android:drawableRight="@drawable/phone"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:inputType="phone"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/white_greyish" />
+
+       <!-- <EditText
             android:maxLength="11"
             android:id="@+id/alert_text_phone"
             android:layout_width="match_parent"
@@ -45,7 +67,7 @@ android:background="@drawable/gradiant_color"
             android:textSize="14sp"
 
 
-            />
+            />-->
 
     </android.support.v7.widget.CardView>
     <android.support.v7.widget.CardView
@@ -56,57 +78,79 @@ android:background="@drawable/gradiant_color"
         app:cardCornerRadius="5dp"
         android:layout_marginTop="5dp"
         >
+
         <EditText
-            android:maxLength="11"
-            android:id="@+id/alert_text_drug"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="15dp"
-            android:inputType="text"
-            android:gravity="right|center"
             android:hint="@string/Drugname"
-            android:background="@drawable/alert_txt"
-            android:textSize="14sp"
-            />
+            android:id="@+id/alert_text_drug"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/gradiant_color"
+            android:drawableRight="@drawable/drugname"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:inputType="textCapWords"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="16sp" />
+
+
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/white_greyish" />
+
 
     </android.support.v7.widget.CardView>
 
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
 
     <TextView
 
         android:id="@+id/alert_send_phonenumber"
         android:layout_marginTop="10dp"
         android:layout_gravity="right"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="1"
         android:layout_height="wrap_content"
         android:text="@string/SendNot"
-        android:textSize="16sp"
+        android:textSize="25dp"
+        android:gravity="center"
+        android:textColor="@drawable/gradiant_color"
+        android:lines="1"
         android:paddingTop="5dp"
         android:paddingBottom="5dp"
         android:paddingLeft="30dp"
         android:paddingRight="30dp"
-        android:textColor="@color/linkColor"
-        android:lines="1"
         android:scrollHorizontally="true"
+        android:background="#dad8d8"
 
         />
     <TextView
-
+        android:background="#dad8d8"
         android:id="@+id/alert_cancelBtn"
         android:layout_marginTop="5dp"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="1"
         android:layout_height="wrap_content"
-        android:layout_gravity="right"
+        android:layout_gravity="left"
+        android:gravity="center"
         android:text="@string/CancelNot"
-        android:textSize="16sp"
+        android:textSize="25dp"
         android:paddingTop="5dp"
         android:paddingBottom="5dp"
         android:paddingLeft="30dp"
         android:paddingRight="30dp"
 
-        android:textColor="@color/linkColor"
+        android:textColor="@drawable/gradiant_color"
 
 
         />
+</LinearLayout>
 </LinearLayout>
