@@ -70,7 +70,7 @@ public class searchFragment_pager extends Fragment {
     private ImageView user_notf;
     private int x ;
 
-
+//
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)

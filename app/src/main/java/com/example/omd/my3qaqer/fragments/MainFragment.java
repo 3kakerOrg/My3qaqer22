@@ -44,7 +44,7 @@ public class MainFragment extends Fragment {
     @BindView(R2.id.search)
     SearchView search;
     private DatabaseReference dRef;
-
+//
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

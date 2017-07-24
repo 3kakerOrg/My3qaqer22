@@ -71,7 +71,7 @@ public class Register_Fragment extends Fragment {
         return view;
     }
 
-
+//
     private void init_View(View view) {
         mContext = view.getContext();
         ///////////////////////////////////////////////////////////////////
