@@ -1,71 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradiant_color"
+    android:orientation="vertical">
 
-    >
     <include
         layout="@layout/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <EditText
-        android:hint="رقم المحمول"
-        android:id="@+id/Login_userPhone"
+    <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
-        android:drawableRight="@drawable/phone"
-        android:drawablePadding="8dp"
-        android:gravity="center_vertical"
-        android:inputType="phone"
+        android:gravity="center"
         android:padding="10dp"
-        android:layout_marginTop="140dp"
-        android:singleLine="true"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        android:textSize="16sp" />
-
-    <View
-        android:layout_width="fill_parent"
-        android:layout_height="1px"
-        android:background="@color/white_greyish" />
-
-    <EditText
-        android:id="@+id/Login_userPassword"
-        android:hint="كلمه المرور لاتقل عن 6 احرف او ارقام"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:gravity="right|center"
-        android:layout_marginTop="15dp"
-        android:background="@android:color/transparent"
-        android:drawableRight="@drawable/password"
-        android:drawablePadding="8dp"
-        android:inputType="textPassword"
-        android:padding="10dp"
-        android:singleLine="true"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        android:textSize="16sp" />
-
-    <View
-        android:layout_width="fill_parent"
-        android:layout_height="1px"
-        android:background="@color/white_greyish" />
-
-    <Button
-        android:id="@+id/Login_logInBtn"
-        android:text="@string/login_txt"
-        android:background="@drawable/button_pressed_state"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:padding="3dp"
-        android:layout_gravity="center"
-        android:textColor="@drawable/gradiant_color"
-        android:layout_marginTop="25dp"
-        android:textSize="20sp"
+        android:text="3qaqer"
+        android:textColor="@color/white_greyish"
+        android:textSize="30sp"
         android:textStyle="bold" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
 
+        >
+
+        <EditText
+            android:id="@+id/Login_userPhone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="140dp"
+            android:background="@android:color/transparent"
+            android:drawablePadding="8dp"
+            android:drawableRight="@drawable/phone"
+            android:gravity="center_vertical"
+            android:hint="رقم المحمول"
+            android:inputType="phone"
+            android:maxLines="1"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/white_greyish" />
+
+        <EditText
+            android:id="@+id/Login_userPassword"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@android:color/transparent"
+            android:drawablePadding="8dp"
+            android:drawableRight="@drawable/password"
+            android:gravity="right|center"
+            android:hint="كلمه المرور لاتقل عن 6 احرف او ارقام"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/white_greyish" />
+
+        <Button
+            android:id="@+id/Login_logInBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/button_pressed_state"
+            android:text="@string/login_txt"
+            android:textColor="@color/combuGreen"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
 </LinearLayout>

@@ -49,7 +49,7 @@ public class login_Fragment extends android.support.v4.app.Fragment {
     FirebaseAuth.AuthStateListener mAuthStateListener;
     DatabaseReference dRef;
     ProgressDialog mDialog;
-
+//
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {

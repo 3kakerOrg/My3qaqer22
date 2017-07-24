@@ -10,6 +10,8 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        vectorDrawables.useSupportLibrary = true
     }
     packagingOptions {
         exclude 'META-INF/NOTICE'
@@ -31,7 +33,7 @@ dependencies {
     })
     'com.github.ViksaaSkool:AwesomeSplash:v1.0.0'
     compile 'com.android.support:appcompat-v7:25.3.1'
-    compile 'com.android.support:design:25.0.0'
+    compile 'com.android.support:design:25.3.1'
     compile 'com.android.support:cardview-v7:25.3.1'
     compile 'de.hdodenhof:circleimageview:2.1.0'
     compile 'com.firebase:firebase-client-android:2.4.0'
